@@ -1,0 +1,15 @@
+a.apidaeChromeTools_btn_metadata {
+	
+}
+
+a.apidaeChromeTools_btn_metadata span {
+	display:inline-block ;
+	font-family:FontAwesome !important ;
+	padding:0 3px ;
+	background:#5794E4 ;
+	color:#FFF ;
+}
+
+a.apidaeChromeTools_btn_metadata span:before {
+	   
+}
