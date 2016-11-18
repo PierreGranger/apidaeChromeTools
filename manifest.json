@@ -15,10 +15,16 @@
 	"tabs", "http://sitra2-vm-preprod.accelance.net/*",
 	"tabs", "https://base.apidae-tourisme.com/*"
 	],
-
+	
+	"web_accessible_resources" : [
+		"elementReferenceToTable.js",
+		"metadonnees.js",
+		"desactiveElementsZero.js"
+	],
+	
 	"content_scripts":[{
 		"matches" : ["http://sitra2-vm-preprod.accelance.net/*","https://base.apidae-tourisme.com/*"],
-		"js":["elementReferenceToTable.js","desactiveElementsZero.js","jquery.min.js","metadonnees.js"],
+		"js":["contentscript.js"],
 		"css": ["apidaeChromeTools.css"]
 	}]
 	

@@ -47,7 +47,6 @@ var desactiveElementsZero = function(){
 				
 				nombre = parseInt(nombre.text().trim()) ;
 				
-				var btn = jQuery(this).find('a.btn') ;
 				var interdit_btn = jQuery(this).hasClass('selected') ;
 				var interdit_etat = jQuery(this).find('td.interdit span').hasClass('fa-ban') ;
 				var nom = jQuery(this).find('td.nom').text().trim() ;
@@ -56,8 +55,8 @@ var desactiveElementsZero = function(){
 				
 				if ( nombre == 0 && interdit_btn == false && interdit_etat == false )
 				{
-					//console.log('interdiction !') ;
-					jQuery(this).addClass('selected').css('outline','4px orange dotted') ;
+					jQuery(this).css('outline','4px blue dotted') ;
+					jQuery(this).find('td.selector a.btn-default').trigger('mousedown') ;
 					nbtot++ ;
 					nbtable++ ;
 				}
@@ -72,3 +71,5 @@ var desactiveElementsZero = function(){
 	jQuery('div.modal.modal-element-reference-criteres-interdits div.modal-header h3').append('+ '+nbtot+' désactivées') ;
 	
 }
+
+//desactiveElementsZero() ;
