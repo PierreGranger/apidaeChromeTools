@@ -20,7 +20,7 @@ Actuellement cette extension n'est pas disponible sur le Chrome Store. Vous deve
 
 ## Usage
 
-Les usages dépendront des besoins. Actuellement des mini-vidéos expliquant leur utilisation sont disponibles dans les dossiers "tutos" présents dans le dossier téléchargé.
+Les usages dépendront des besoins. Actuellement des mini-vidéos expliquant leur utilisation sont disponibles sur http://pgranger.github.io.
 
 ## Tests
 
