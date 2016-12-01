@@ -19,7 +19,8 @@
 	"web_accessible_resources" : [
 		"elementReferenceToTable.js",
 		"metadonnees.js",
-		"desactiveElementsZero.js"
+		"desactiveElementsZero.js",
+		"afficherMetadonnees.js"
 	],
 	
 	"content_scripts":[{
