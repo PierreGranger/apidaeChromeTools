@@ -1,20 +1,17 @@
 console.log('apidaeChromeTools/afficherMetadonnees.js') ;
 
 /*
-	Impossible tant qu'on n'aura pas de serveur https.
-	La base étant en HTTPS on ne peut autoriser que des requêtes vers des serveurs https.
-	On pourrait se servir directement de l'appel de l'API Apidae qui supporte https :
-	// https://api.sitra-tourisme.com/api/v002/objet-touristique/get-by-id/89935?apiKey=Xwfkm2HB&projetId=2006&responseFields=@all
-	Sauf qu'il faudrait pour ça envoyer un entête Acces-Control-Allow-Origin :
-	// No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://base.apidae-tourisme.com' is therefore not allowed access.
+	Possibilité de connexion ajax sur un autre serveur :
+	Installation d'un serveur SSL local et accès sur https://apidae.allier-tourisme.net
 */
 
-var url_metadonnees = 'https://api.sitra-tourisme.com/api/v002/...' ;
-var url_metadonnees = 'http://apidae.allier-auvergne-tourisme.com/metadonnees/get.php' ;
+var url_metadonnees = 'https://apidae.allier-tourisme.net/metadonnees/get.php' ;
 
 var afficherMetadonnees = function(){
 
-	var table = jQuery('div.content table.recherche-gestion') ;
+	var table_selector = 'div.content table.recherche-gestion' ;
+
+	var table = jQuery(table_selector) ;
 	if ( table.length !== 1 )
 	{
 		var ask = confirm('Vous devez être sur la page "Mes données". Aller sur la page "Mes données" ?') ;
@@ -37,21 +34,48 @@ var afficherMetadonnees = function(){
 	}) ;
 
 	ajax.done(function(data){
-		console.log('done',data) ;
-	}) ;
 
-	ajax.fail(function(data){
-		console.log('Fail',data) ;
-		if ( data.statusText == "error" )
+		console.log('done',data) ;
+
+		for ( var i in data['entetes'] )
+		{
+			table.find('thead tr').append('<th>'+data['entetes'][i]+'</th>') ;
+		}
+
+		table.find('tbody tr').each(function(){
+			var tr = jQuery(this) ;
+			var id = tr.data('itemselector-itemid') ;
+			for ( var i in data['entetes'] )
+			{
+				var td = '<td class="'+data['entetes'][i]+'">' ;
+				if (
+					typeof data['lignes'][id] !== 'undefined'
+					&& typeof data['lignes'][id][data['entetes'][i]] !== 'undefined'
+				)
+					td += data['lignes'][id][data['entetes'][i]] ;
+				td += '</td>' ;
+				tr.append(td) ;
+			}
+		}) ;
+		/*
+		if ( data.match(/réservé/) )
 		{
 			var ask = confirm('Nous devons vérifier vos droits pour utiliser cet outil : aller sur la page d\'authorisation ?') ;
 			if ( ask )
 			{
-				window.open('http://apidae.allier-auvergne-tourisme.com/','_blank') ;
+				window.open('https://apidae.allier-tourisme.net','_blank') ;
 				return true ;
 			}
 			return false ;
 		}
+		*/
+
+	}) ;
+
+	ajax.fail(function(data){
+		console.log('ajax fail') ;
+		alert('Une erreur s\'est produite...') ;
+		console.log(data) ;
 	}) ;
 
 }
