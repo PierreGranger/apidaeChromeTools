@@ -1,11 +1,6 @@
 console.log('apidaeChromeTools/afficherMetadonnees.js') ;
 
-/*
-	Possibilité de connexion ajax sur un autre serveur :
-	Installation d'un serveur SSL local et accès sur https://apidae.allier-tourisme.net
-*/
-
-var url_metadonnees = 'https://apidae.allier-tourisme.net/metadonnees/get.php' ;
+var url_metadonnees = 'https://apidae.allier-tourisme.net:8081/getMetadonnees.php' ;
 
 var afficherMetadonnees = function(){
 
