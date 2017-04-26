@@ -1,12 +1,12 @@
 console.log('apidaeChromeTools/metadonnees.js') ;
 
 jQuery('table.recherche-gestion thead tr').each(function(){
-	jQuery(this).append('<th class="fiche"></th>') ;
+	jQuery(this).append('<th class="fiche edit"></th>') ;
 }) ;
 
 jQuery('table.recherche-gestion tbody tr').each(function(){
 	var td_edit = jQuery(this).find('td.edit') ;
-	jQuery(this).append('<td class="fiche"><a class="btn btn-primary btn-mini btn-icon-only btn-primary metadonnees" href="#"><span class="fa fa-fw fa-file-code-o"></span></a></td>') ;
+	jQuery(this).append('<td class="fiche edit"><a class="btn btn-primary btn-mini btn-icon-only btn-primary metadonnees" href="#"><span class="fa fa-fw fa-file-code-o"></span></a></td>') ;
 }) ;
 
 jQuery(document).on('click','a.btn.metadonnees',function(){
