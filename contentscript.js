@@ -1,7 +1,8 @@
 console.log('apidaeChromeTools/contentscript.js') ;
 
 /* On ajoute tous les scripts en les injectant */
-var scripts_injectes = ["elementReferenceToTable.js","metadonnees.js","desactiveElementsZero.js","contentscript.listeners.js","afficherMetadonnees.js"] ;
+var scripts_injectes = ["elementReferenceToTable.js","metadonnees.js","desactiveElementsZero.js","afficherMetadonnees.js"] ;
+var css_injectes = ["custom.css"] ;
 
 for ( var i in scripts_injectes )
 {
@@ -12,9 +13,17 @@ for ( var i in scripts_injectes )
 		this.remove();
 	};
 	(document.head || document.documentElement).appendChild(s);
-
 }
  
+for ( var i in css_injectes )
+{
+	var link = document.createElement("link");
+	link.href = chrome.extension.getURL(css_injectes[i]) ;
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	document.getElementsByTagName("head")[0].appendChild(link);
+}
+
 /* 
 	On a ajouté les scripts directement dans la page.
 	Maintenant pour appeler une fonction contenue dans ces scripts à partir du popup de l'extension, il va falloir que la page "écoute" les événements déclenchés par les clics sur le popup.

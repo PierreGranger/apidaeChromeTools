@@ -1,0 +1,43 @@
+div.main-nav-container {
+}
+
+div.main-nav-container>div.side-menu {
+	overflow:visible ;
+}
+
+div.main-nav-container>div.side-menu>div.menu-container {
+	left:0 !important ;
+}
+
+div.main-nav-container>div.side-menu>div.menu-container>ul {
+}
+
+div.main-nav-container>div.side-menu>div.menu-container>ul li {
+	position:relative ;
+}
+
+div.main-nav-container>div.side-menu>div.menu-container>ul li>ul {
+	display:none ;
+}
+
+div.main-nav-container>div.side-menu>div.menu-container>ul li:hover>ul {
+	display:block ;
+}
+
+div.main-nav-container>div.side-menu>div.menu-container>ul li {
+	background:#606060 ;
+}
+
+div.main-nav-container>div.side-menu>div.menu-container>ul li span.back-simple {
+	display:none ;
+}
+
+.side-menu .side-menu-block .side-menu-item .side-menu-link {
+	padding:6px 3% ;
+	display: block ;
+	width:94% ;
+}
+
+.side-menu {
+	width:20% ;
+}

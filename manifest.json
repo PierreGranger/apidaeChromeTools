@@ -20,7 +20,8 @@
 		"elementReferenceToTable.js",
 		"metadonnees.js",
 		"desactiveElementsZero.js",
-		"afficherMetadonnees.js"
+		"afficherMetadonnees.js",
+		"custom.css"
 	],
 	
 	"content_scripts":[{
