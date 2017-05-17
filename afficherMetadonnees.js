@@ -69,8 +69,17 @@ var afficherMetadonnees = function(){
 
 	ajax.fail(function(data){
 		console.log('ajax fail') ;
-		alert('Une erreur s\'est produite...') ;
+		console.log(url_metadonnees) ;
 		console.log(data) ;
+		var c = confirm('Une erreur s\'est produite... Impossible d\'accéder à la liste des métadonnées : voulez-vous essayer de consulter cette page pour voir l\'erreur ?') ;
+		if ( c )
+		{
+			window.open(this.url) ;
+		}
+		else
+		{
+			return false ;
+		}
 	}) ;
 
 }
