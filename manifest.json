@@ -21,6 +21,7 @@
 		"metadonnees.js",
 		"desactiveElementsZero.js",
 		"afficherMetadonnees.js",
+		"afficherDonneesPrivees.js",
 		"custom.css"
 	],
 	
