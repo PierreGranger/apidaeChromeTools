@@ -41,3 +41,14 @@ div.main-nav-container>div.side-menu>div.menu-container>ul li span.back-simple {
 .side-menu {
 	width:20% ;
 }
+
+span[data-elementreferenceid]::after {
+    content: attr(data-elementreferenceid);
+    /* position: absolute; */
+    /* border: 1px dotted orange; */
+    padding: 2px 5px;
+    border-radius: 3px;
+    background: white;
+	color: #000;
+	font-weight:bold ;
+}

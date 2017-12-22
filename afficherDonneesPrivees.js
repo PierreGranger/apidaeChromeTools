@@ -49,6 +49,7 @@ var afficherDonneesPrivees = function(){
 	ajax.done(function(data){
 
 		console.log('done',data) ;
+		console.log('typeof data',typeof data) ;
 
 		for ( var i in data['entetes'] )
 		{
@@ -72,8 +73,13 @@ var afficherDonneesPrivees = function(){
 					if ( data['entetes'][i] == 'index_gvl' )
 					{
 						var echo = '' ;
-						var temp = data['lignes'][id][data['entetes'][i]].split(',') ;
-						for ( var i in temp ) echo += '<span class="label label-default">'+temp[i].trim()+'</span> ' ;
+						console.log('typeof data[lignes][id][data[entetes][i]]',typeof data['lignes'][id][data['entetes'][i]]) ;
+						if ( typeof data['lignes'][id][data['entetes'][i]] != 'undefined' && data['lignes'][id][data['entetes'][i]] != null )
+						{
+							var temp = data['lignes'][id][data['entetes'][i]].split(',') ;
+							for ( var i in temp ) echo += '<span class="label label-default">'+temp[i].trim()+'</span> ' ;
+						}
+						
 						td += echo ;
 					}
 					else
