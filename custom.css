@@ -44,11 +44,29 @@ div.main-nav-container>div.side-menu>div.menu-container>ul li span.back-simple {
 
 span[data-elementreferenceid]::after {
     content: attr(data-elementreferenceid);
-    /* position: absolute; */
-    /* border: 1px dotted orange; */
     padding: 2px 5px;
     border-radius: 3px;
     background: white;
 	color: #000;
 	font-weight:bold ;
+}
+
+
+li[data-elementreferenceid] {
+	position:relative ;
+}
+
+li[data-elementreferenceid]::before {
+	content: attr(data-elementreferenceid) !important;
+    padding: 2px 5px;
+    border-radius: 3px;
+    background: white;
+	color: #000;
+	font-weight:bold ;
+	position: absolute ;
+	display: inline-block ;
+	line-height: normal !important ;
+	top:10px ;
+	opacity:0.5 ;
+	right:30px ;
 }
