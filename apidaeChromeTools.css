@@ -13,3 +13,24 @@ a.apidaeChromeTools_btn_metadata span {
 a.apidaeChromeTools_btn_metadata span:before {
 	   
 }
+
+ul.apidaeChromeTools {
+	list-style-type:none ;
+	margin:0 ;
+	padding:0 ;
+}
+
+ul.apidaeChromeTools li {
+
+}
+
+ul.apidaeChromeTools li a {
+	display:inline-block ;
+	padding:3px 10px ;
+	font-weight:bold ;
+	background:#5794E4 ;
+	color:#FFF ;
+	text-decoration:none ;
+	margin-bottom:5px ;
+	border-radius:5px ;
+}

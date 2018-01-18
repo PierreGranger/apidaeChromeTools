@@ -1,6 +1,6 @@
 console.log('apidaeChromeTools/afficherDonneesPrivees.js') ;
 
-var url_DonneesPrivees = 'https://apidae.allier-tourisme.net:8081/getDonneesPrivees.php' ;
+var url_DonneesPrivees = 'https://www.allier-auvergne-tourisme.com/apidaeChromeTools/getDonneesPrivees.php' ;
 
 var afficherDonneesPrivees = function(){
 
@@ -89,19 +89,7 @@ var afficherDonneesPrivees = function(){
 				tr.append(td) ;
 			}
 		}) ;
-		/*
-		if ( data.match(/réservé/) )
-		{
-			var ask = confirm('Nous devons vérifier vos droits pour utiliser cet outil : aller sur la page d\'authorisation ?') ;
-			if ( ask )
-			{
-				window.open('https://apidae.allier-tourisme.net','_blank') ;
-				return true ;
-			}
-			return false ;
-		}
-		*/
-
+		
 	}) ;
 
 	ajax.fail(function(data){
