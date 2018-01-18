@@ -17,11 +17,15 @@ div.main-nav-container>div.side-menu>div.menu-container>ul li {
 }
 
 div.main-nav-container>div.side-menu>div.menu-container>ul li>ul {
-	display:none ;
+	display:block ;
+	visibility:hidden ;
+	opacity:0 ;
+	transition: visibility 0.5s, opacity 0.5s ;
 }
 
 div.main-nav-container>div.side-menu>div.menu-container>ul li:hover>ul {
-	display:block ;
+	visibility:visible ;
+	opacity:1 ;
 }
 
 div.main-nav-container>div.side-menu>div.menu-container>ul li {

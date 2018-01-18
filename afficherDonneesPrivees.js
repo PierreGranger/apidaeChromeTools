@@ -83,7 +83,12 @@ var afficherDonneesPrivees = function(){
 						td += echo ;
 					}
 					else
-						td += '<span class="label label-success">'+data['lignes'][id][data['entetes'][i]]+'</span> ' ;
+					{
+						if ( data['lignes'][id][data['entetes'][i]].length > 10 )
+							td += '<span>'+data['lignes'][id][data['entetes'][i]]+'</span> ' ;
+						else
+							td += '<span class="label label-success">'+data['lignes'][id][data['entetes'][i]]+'</span> ' ;
+					}
 				}
 				td += '</td>' ;
 				tr.append(td) ;
