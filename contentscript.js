@@ -1,7 +1,7 @@
 console.log('apidaeChromeTools/contentscript.js') ;
 
 /* On ajoute tous les scripts en les injectant */
-var scripts_injectes = ["elementReferenceToTable.js","metadonnees.js","desactiveElementsZero.js","afficherMetadonnees.js","afficherDonneesPrivees.js"] ;
+var scripts_injectes = ["elementReferenceToTable.js","metadonnees.js","desactiveElementsZero.js","afficherMetadonnees.js","afficherDonneesPrivees.js","afficherOptionValue.js"] ;
 var css_injectes = ["custom.css"] ;
 
 for ( var i in scripts_injectes )

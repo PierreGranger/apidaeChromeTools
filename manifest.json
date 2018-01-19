@@ -22,6 +22,7 @@
 		"desactiveElementsZero.js",
 		"afficherMetadonnees.js",
 		"afficherDonneesPrivees.js",
+		"afficherOptionValue.js",
 		"custom.css"
 	],
 	
