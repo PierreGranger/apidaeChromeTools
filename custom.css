@@ -74,3 +74,7 @@ li[data-elementreferenceid]::before {
 	opacity:0.5 ;
 	right:30px ;
 }
+
+.fixed-side-nav .main-content {
+	margin-left:20% ;
+}

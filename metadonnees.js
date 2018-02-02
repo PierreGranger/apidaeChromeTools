@@ -9,6 +9,22 @@ jQuery('table.recherche-gestion tbody tr').each(function(){
 	jQuery(this).append('<td class="fiche edit"><a class="btn btn-primary btn-mini btn-icon-only btn-primary metadonnees" href="#"><span class="fa fa-fw fa-file-code-o"></span></a></td>') ;
 }) ;
 
+jQuery('body.recherche-intuitive.page-fiche-objet-touristique').find('.action-container').each(function(){
+	var id = jQuery('div[data-gmap-reference-id]').data('gmap-reference-id') ;
+	var btn = '<a class="menu-link menu-link-large" target="_blank" href="http://apidae.allier-auvergne-tourisme.com/metadonnees/form.php?id='+id+'">' ;
+		btn += '<span class="fa fa-lg fa-file-code-o"></span>' ;
+	btn += '</a>' ;
+	jQuery(this).append(btn) ;
+}) ;
+
+jQuery('body.fiche-consultation').find('.action-container').each(function(){
+	var id = jQuery('.label-mes-objets').text() ;
+	var btn = '<a class="menu-link menu-link-large" target="_blank" href="http://apidae.allier-auvergne-tourisme.com/metadonnees/form.php?id='+id+'">' ;
+		btn += '<span class="fa fa-lg fa-file-code-o"></span>' ;
+	btn += '</a>' ;
+	jQuery(this).append(btn) ;
+}) ;
+
 jQuery(document).on('click','a.btn.metadonnees',function(){
 	var id = jQuery(this).closest('tr').data('itemselector-itemid') ;
 	var h1 = jQuery(this).closest('tr').find('td.nom a').first().text() ;
