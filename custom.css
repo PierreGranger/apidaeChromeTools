@@ -78,3 +78,13 @@ li[data-elementreferenceid]::before {
 .fixed-side-nav .main-content {
 	margin-left:20% ;
 }
+
+/*
+body.referentiel div.fiche-contenu table.table-criteres-interdits a.pull-right::before {
+	content:attr(href) ;
+}*/
+
+/* Remet l'identifiant au début de la ligne et permet de double cliquer pour faciliter les copier/coller */
+td.nom .pull-right {
+	float:none !important ;
+}
