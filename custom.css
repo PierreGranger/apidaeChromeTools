@@ -88,3 +88,20 @@ body.referentiel div.fiche-contenu table.table-criteres-interdits a.pull-right::
 td.nom .pull-right {
 	float:none !important ;
 }
+
+td.proprietaire img,
+td.proprietaire div {
+	max-height:14px ;
+	overflow:hidden ;
+	padding:0 ;
+}
+
+.table.recherche-gestion td, .table.recherche-gestion th {
+	padding:4px ;
+	vertical-align:middle ;
+}
+
+.table.recherche-gestion td .label-id {
+	width:50px ;
+	text-align:center ;
+}
