@@ -105,3 +105,15 @@ td.proprietaire div {
 	width:50px ;
 	text-align:center ;
 }
+
+body.user-signed-in-as {
+	background:#f3d2d2 ;
+}
+
+body.user-signed-in-as .top-menu {
+	background:#952020 ;
+}
+
+body.user-signed-in-as .top-menu .menu-link-separator {
+	background:rgba(0,0,0,.3) ;
+}

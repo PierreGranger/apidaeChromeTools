@@ -11,7 +11,8 @@
 	"permissions": [
 		"activeTab",
 		"tabs",
-		"https://base.apidae-tourisme-recette.accelance.net/*",
+		"https://base.apidae-tourisme.cooking/*",
+		"https://base.apidae-tourisme.dev/*",
 		"https://base.apidae-tourisme.com/*"
 	],
 	"web_accessible_resources": [
@@ -21,12 +22,14 @@
 		"afficherMetadonnees.js",
 		"afficherDonneesPrivees.js",
 		"afficherOptionValue.js",
-		"custom.css"
+		"custom.css",
+		"signedInAs.js"
 	],
 	"content_scripts": [
 		{
 			"matches": [
-				"https://base.apidae-tourisme-recette.accelance.net/*",
+				"https://base.apidae-tourisme.cooking/*",
+				"https://base.apidae-tourisme.dev/*",
 				"https://base.apidae-tourisme.com/*"
 			],
 			"js": [
